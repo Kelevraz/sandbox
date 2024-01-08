@@ -1,0 +1,115 @@
+<!-- Step 1Passed
+JavaScript is a powerful language which allows you to build websites that are interactive.
+
+To get started, create your standard HTML boilerplate with a DOCTYPE, html, head, and body, then add a meta tag for the charset. Add a title element and use the text RPG - Dragon Repeller for it. Include a link tag for your stylesheet to link the styles.css file.
+
+Finally, create a div element with id set to game within your body. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>RPG - Dragon Repeller</title>
+  </head>
+  <body>
+    <div id="game">
+    </div>
+  </body>
+</html>
+
+<!-- Step 2Passed
+Create four div elements within your #game element. Give them the following respective id values, in order: stats, controls, monsterStats, and text. -->
+
+<body>
+    <div id="game">
+      <div id="stats">
+
+      </div>
+      <div id="controls"></div>
+      <div id="monsterStats"></div>
+      <div id="text"></div>
+    </div>
+  </body>
+
+<!-- Step 3Passed
+Create three span elements within your #stats element. Give each of them the class stat. Then give the first one the text XP: 0, the second one the text Health: 100, and the third one the text Gold: 50. -->
+
+      <div id="stats">
+        <span class="stat">XP: 0</span>
+        <span class="stat">Health: 100</span>
+        <span class="stat">Gold: 50</span>
+      </div>
+
+<!-- Step 4Passed
+Wrap the numbers 0, 100, and 50 in span elements, and wrap those new span elements in strong elements. Then give your new span elements id values of xpText, healthText, and goldText, respectively. -->
+
+      <div id="stats">
+        <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+        <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+      </div>
+
+<!-- Step 5Passed
+For your #controls element, create three button elements. The first should have the id set to button1, and the text Go to store. The second should have the id set to button2, and the text Go to cave. The third should have the id set to button3, and the text Fight dragon.
+-->
+
+<div id="controls">
+<button id="button1">Go to store</button>
+<button id="button2">Go to cave</button>
+<button id="button3">Fight dragon</button>
+      </div>
+
+<!-- Step 6Passed
+Similar to your #stats element, your #monsterStats element needs two span elements. Give them the class stat and give the first element the text Monster Name: and the second the text Health: . After the text in each, add a strong element with an empty nested span element. Give the first inner span element an id of monsterName and the second inner span element an id of monsterHealth.
+-->
+
+<div id="monsterStats">
+      <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+      <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+      </div>
+
+<!-- Step 7Passed
+Give your #text element the following text:
+
+Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+-->
+
+<div id="text">
+Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+      </div>
+
+<!-- Step 8Passed
+Now we need some quick styling. Start by giving the body a background-color set to #0a0a23.
+-->
+
+body {
+  background-color: #0a0a23;
+}
+
+<!-- Step 9Passed
+Give the #text element a background-color of #0a0a23, a color of #ffffff, and 10px of padding on all sides.
+-->
+
+#text {
+  background-color: #0a0a23;
+  color: #ffffff;
+  padding: 10px;
+}
+
+<!-- Step 10Passed
+Give your #game a maximum width of 500px and a maximum height of 400px. Set the background-color to #ffffff and the color to #ffffff.
+
+Use margins to center it by setting the top margin to 30px, bottom margin to 0px, and the left and right margin to auto.
+
+Finally, give it 10px of padding on all four sides.
+-->
+
+#game {
+    max-width: 500px;
+    max-height: 400px;
+    background-color: #ffffff;
+    color: #ffffff;
+    margin: 30px auto 0px;
+    padding: 10px;
+}
