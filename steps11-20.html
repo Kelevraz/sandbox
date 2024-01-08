@@ -1,0 +1,95 @@
+<!-- Step 11Passed
+Give both your #controls and #stats elements a border of 1px solid #0a0a23, a #0a0a23 text color, and 5px of padding. -->
+
+#controls, #stats {
+    border: 1px solid #0a0a23;
+    padding: 5px;
+    color: #0a0a23;
+}
+
+<!-- Step 12Passed
+Give your #monsterStats element the same border and padding as your #stats element. Set its color to #ffffff and give it a #c70d0d background. -->
+
+#monsterStats {
+    border: 1px solid #0a0a23;
+    padding: 5px;
+    background-color: #c70d0d;
+    color: #ffffff;
+}
+
+
+<!-- Step 13Passed
+For now, hide your #monsterStats element with the display property. Do not change any of the other styling. -->
+
+#monsterStats {
+
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #c70d0d;
+  display: none;
+}
+
+<!-- Step 14Passed
+Next, give your .stat elements a padding-right of 10px. -->
+
+.stat {
+  padding-right: 10px;
+}
+
+<!-- Step 15Passed
+Finally, you will need to add some styles for your buttons. Start by setting the cursor property to pointer. Then set the text color to #0a0a23 and the background-color to #feac32.
+
+Then set the background-image property to linear-gradient(#fecc4c, #ffac33). Lastly, set the border to 3px solid #feac32. -->
+
+button {
+    cursor: pointer;
+    color: #0a0a23;
+    background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+}
+
+<!-- Step 16Passed
+Now you can start writing your JavaScript. Begin by creating a script element. This element is used to load JavaScript into your HTML file. You should use an opening <script> and closing </script> tag. -->
+
+<script></script>
+
+<!-- Step 17Passed
+One of the most powerful tools is your developer console. Depending on your browser, this might be opened by pressing F12 or Ctrl+Shift+I. On Mac, you can press Option + ⌘ + C and select "Console". You can also click the "Console" button above the preview window to see our built-in console.
+
+The developer console will include errors that are produced by your code, but you can also use it to see values of variables in your code, which is helpful for debugging.
+
+Add a console.log("Hello World"); line between your script tags. Then click the "Console" button to open the console. You should see the text Hello World.
+
+Note how the line ends with a semi-colon. It is common practice in JavaScript to end your code lines with semi-colons. -->
+
+    <script>
+console.log("Hello World");
+    </script>
+	
+<!-- Step 18Passed
+Before you start writing your project code, you should move it to its own file to keep things organized.
+
+Remove your console.log("Hello World"); line. Then give your now empty script element a src attribute set to ./script.js. -->
+
+    <script src="./script.js">
+      
+    </script>
+	
+<!-- Step 19Passed
+Your view has been switched to your new script.js file. Remember that you can use the tabs above to switch between files.
+
+Add your console.log("Hello World"); line to this file, and see it appear in your console. -->
+
+console.log("Hello World");
+
+<!-- Step 20
+Remove your console.log("Hello World"); line to begin writing your project code.
+
+In JavaScript, a variable is used to hold a value. To use a variable, you must first declare it. For example, to declare a variable called camperbot, you would write:
+
+var camperbot;
+The var keyword tells JavaScript you are declaring a variable. Declare a variable called xp. -->
+
+var xp;
