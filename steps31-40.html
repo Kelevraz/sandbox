@@ -1,0 +1,136 @@
+<!-- Step 31
+We have run in to a slight problem. You are trying to query your page for a button element, but your script tag is in the head of your HTML. This means your code runs before the browser has finished reading the HTML, and your document.querySelector() will not see the button - because the browser hasn't processed it yet.
+
+To fix this, move your script element out of the head element, and place it at the end of your body element (just before the closing </body> tag.) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>RPG - Dragon Repeller</title>
+  </head>
+  <body>
+    <div id="game">
+      <div id="stats">
+        <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+        <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+      </div>
+      <div id="controls">
+        <button id="button1">Go to store</button>
+        <button id="button2">Go to cave</button>
+        <button id="button3">Fight dragon</button>
+      </div>
+      <div id="monsterStats">
+        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+      </div>
+      <div id="text">
+        Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+      </div>
+    </div>
+<script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- Step 32
+button1 is a variable that is not going to be reassigned. If you are not going to assign a new value to a variable, it is best practice to use the const keyword to declare it instead of the let keyword. This will tell JavaScript to throw an error if you accidentally reassign it.
+
+Change your button1 variable to be declared with the const keyword. -->
+
+const button1 = document.querySelector("#button1");
+
+<!-- Step 33
+Use querySelector() to get the other two button elements using their ids: button2 and button3. Store them in variables called button2 and button3. Remember to use const. -->
+
+const button1 = document.querySelector("#button1");
+const button2 = document.querySelector("#button2");
+const button3 = document.querySelector("#button3");
+
+<!-- Step 34
+Just like you did with the buttons, create variables for the following ids and use querySelector() to give them the element as a value:
+
+text, xpText, healthText, goldText, monsterStats, and monsterName.
+
+Remember to declare these with the const keyword, and name the variables to match the ids. -->
+
+const button1 = document.querySelector("#button1");
+const button2 = document.querySelector("#button2");
+const button3 = document.querySelector("#button3");
+const text = document.querySelector("#text");
+const xpText = document.querySelector("#xpText");
+const healthText = document.querySelector("#healthText");
+const goldText = document.querySelector("#goldText");
+const monsterStats = document.querySelector("#monsterStats");
+const monsterName = document.querySelector("#monsterName");
+
+<!-- Step 35
+Finally, use querySelector() to get the #monsterHealth element. Because you have already declared a monsterHealth variable earlier, you need to use a different variable name for this element.
+
+Declare a new variable with the const keyword and name it monsterHealthText. -->
+
+const button1 = document.querySelector('#button1');
+const button2 = document.querySelector("#button2");
+const button3 = document.querySelector("#button3");
+const text = document.querySelector("#text");
+const xpText = document.querySelector("#xpText");
+const healthText = document.querySelector("#healthText");
+const goldText = document.querySelector("#goldText");
+const monsterStats = document.querySelector("#monsterStats");
+const monsterName = document.querySelector("#monsterName");
+const monsterHealthText = document.querySelector("#monsterHealth");
+
+<!-- Step 36
+Comments allow you to add notes to your code. In JavaScript, single-line comments can be written with // and multi-line comments can be written with /* and */. For example, here are single and multi-line comments that say "Hello World":
+
+// hello world
+
+/*
+  hello world
+*/
+Add a single-line comment that says initialize buttons. -->
+
+// initialize buttons
+
+<!-- Step 37
+button1 represents your first button element. These elements have a special property called onclick, which you can use to determine what happens when someone clicks that button.
+
+You can access properties in JavaScript a couple of different ways. The first is with dot notation. Accessing the onclick property of a button would look like:
+
+button.onclick
+Use dot notation to set the onclick property of your button1 to the function reference of goStore. This function will be something you write later. Note that button1 is already declared, so you don't need to use let or const. -->
+
+// initialize buttons
+button1.onclick = goStore
+
+<!-- Step 38
+Using the same syntax, set the onclick properties of button2 and button3 to goCave and fightDragon respectively. -->
+
+// initialize buttons
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
+
+<!-- Step 39
+Functions are special tools that allow you to run sections of code at specific times. You can declare functions using the function keyword. Here is an example of a function called functionName - note the opening and closing curly braces. These indicate the section of code that is within the function.
+
+function functionName() {
+
+}
+Create an empty function named goStore. This will match the goStore variable you used earlier. -->
+
+function goStore() {
+
+}
+
+<!-- Step 40
+For now, make your goStore function output the message Going to store. to the console. For example, here is a function that outputs the message Hello World.
+
+function functionName() {
+    console.log("Hello World");
+} -->
+
+function goStore() {
+    console.log("Going to store.");
+}
