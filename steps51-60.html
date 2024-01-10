@@ -1,0 +1,127 @@
+<!-- Step 51
+You have repetition in the goTown and goStore functions. When you have repetition in your code, this is a sign that you need another function. Functions can take parameters, which are values that are given to the function each time it is run. Here is a function that takes a parameter called param:
+
+function myFunction(param) {
+    console.log(param);
+}
+Create an empty update function that takes a parameter called location. -->
+
+function update(location) {
+}
+
+<!-- Step 52
+Create a variable called locations and set it to an empty array. -->
+
+const locations = [];
+
+<!-- Step 53
+You previously used an array to store strings. But arrays can store any data type. This time, your array will be storing objects. Objects are similar to arrays, but with a few differences. One difference is that objects use properties, or keys, to access and modify data.
+
+Objects are indicated by curly braces. An empty object would look like {}.
+
+Add an empty object to your locations array. -->
+
+const locations = [{}];
+
+<!-- Step 54
+Object properties are written as key: value pairs, where key is the name of the property (or the key), and value is the value that property holds. For example, here is an object with a key of name set to Quincy Larson.
+
+{
+  name: "Quincy Larson"
+}
+Add a name property to your empty object and give it a value of town square. -->
+
+const locations = [
+  {
+    name: "town square"
+  }
+];
+
+<!-- Step 55
+Just like array values, object properties are separated by a comma. Add a comma after your name property and add a button text property with the value of an empty array.
+
+Note that, because the property name has more than one word, you'll need to surround it in quotes. For example:
+
+{
+  name: "Naomi",
+  "favorite color": "purple"
+} -->
+
+const locations = [
+  {
+    name: "town square",
+    "button text": []
+  }
+];
+
+<!-- Step 56
+Give your empty button text array three string elements. Use the three strings being assigned to the button innerText properties in the goTown function. Remember that array values are separated by commas. -->
+
+const locations = [
+  {
+    name: "town square",
+    "button text": ["Go to store", "Go to cave", "Fight dragon"]
+  }
+];
+
+<!-- Step 57
+Create another property in your object called button functions. Give this property an array containing the three functions assigned to the onclick properties in the goTown function. Remember that these functions are variables, not strings, and should not be wrapped in quotes. -->
+
+const locations = [
+  {
+    name: "town square",
+    "button text": ["Go to store", "Go to cave", "Fight dragon"],
+    "button functions": [goStore, goCave, fightDragon]
+  }
+];
+
+<!-- Step 58
+Add one final property to the object named text. Give this property the same string value as the one assigned to text.innerText in the goTown function. -->
+
+const locations = [
+  {
+    name: "town square",
+    "button text": ["Go to store", "Go to cave", "Fight dragon"],
+    "button functions": [goStore, goCave, fightDragon],
+    text: "You are in the town square. You see a sign that says \"Store\"."
+  }
+];
+
+<!-- Step 59
+Add a second object to your locations array (remember to separate them with a comma). Following the pattern you used in the first object, create the same properties but use the values from the goStore function. Set the name property to store. -->
+
+const locations = [
+  {
+    name: "town square",
+    "button text": ["Go to store", "Go to cave", "Fight dragon"],
+    "button functions": [goStore, goCave, fightDragon],
+    text: "You are in the town square. You see a sign that says \"Store\"."
+  },
+  {
+    name: "store",
+    "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+    "button functions": [buyHealth, buyWeapon, goTown],
+    text: "You enter the store."
+  }
+];
+
+<!-- Step 60
+Now you can consolidate some of your code. Start by copying the code from inside the goTown function and paste it into your update function. Then, remove all the code from inside the goTown and goStore functions. -->
+
+function update(location) {
+  button1.innerText = "Go to store";
+  button2.innerText = "Go to cave";
+  button3.innerText = "Fight dragon";
+  button1.onclick = goStore;
+  button2.onclick = goCave;
+  button3.onclick = fightDragon;
+  text.innerText = "You are in the town square. You see a sign that says \"Store\".";
+}
+
+function goTown() {
+
+}
+
+function goStore() {
+
+}
